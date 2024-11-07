@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = 'resume.pdf'; // Link to the PDF file of the resume
+            link.download = 'resume.pdf';
+            link.click();
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="max-w-4xl mx-auto my-10 p-8 bg-white shadow-lg rounded-lg">
+        <!-- Buttons -->
+        <div class="flex justify-between mb-6">
+            <button onclick="downloadResume()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                Download Resume
+            </button>
+            <button onclick="goBack()" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
+                Back
+            </button>
+        </div>
+
+        <!-- Name -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-900">TAMILARASAN.M</h1>
+            <p class="text-lg text-gray-600">Student</p>
+        </div>
+
+        <!-- Profile -->
+        <div class="mb-6">
+            <h2 class="text-2xl font-semibold text-gray-900">Profile</h2>
+            <p class="mt-2 text-gray-700">Web developer. I consider myself a responsible and orderly person. I am looking forward to my first work experience.</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="mb-6">
+            <h2 class="text-2xl font-semibold text-gray-900">Contact Me</h2>
+            <ul class="mt-2 text-gray-700">
+                <li><strong>Phone:</strong> +91 6369479748</li>
+                <li><strong>Email:</strong> <a href="mailto:arasan7102003@gmail.com" class="text-blue-600">arasan7102003@gmail.com</a></li>
+                <li><strong>Address:</strong> Sastha street, Mundiyampakkam, Vikravandi taluk, Villupuram - 605601</li>
+            </ul>
+        </div>
+
+        <!-- Education -->
+        <div class="mb-6">
+            <h2 class="text-2xl font-semibold text-gray-900">Education</h2>
+            <ul class="mt-2 text-gray-700">
+                <li><strong>SRM Infotech:</strong> Python course and Microsoft Office (2023)</li>
+                <li><strong>SIGA College of Management and Computer Science:</strong> BCA Computer Application (2021 - 2024)</li>
+            </ul>
+        </div>
+
+        <!-- Languages -->
+        <div class="mb-6">
+            <h2 class="text-2xl font-semibold text-gray-900">Languages</h2>
+            <ul class="mt-2 text-gray-700">
+                <li><strong>Native:</strong> Tamil</li>
+                <li><strong>Knowledge in:</strong> English</li>
+            </ul>
+        </div>
+
+        <!-- Computer Skills -->
+        <div class="mb-6">
+            <h2 class="text-2xl font-semibold text-gray-900">Computer Skills</h2>
+            <ul class="mt-2 text-gray-700">
+                <li>Operating systems</li>
+                <li>Programming</li>
+                <li>Databases</li>
+                <li>Video editing</li>
+                <li>Data and information visualization</li>
+            </ul>
+        </div>
+
+        <!-- Volunteer Experience -->
+        <div>
+            <h2 class="text-2xl font-semibold text-gray-900">Volunteer Experience</h2>
+            <p class="mt-2 text-gray-700">Worked for online services through public network centre.</p>
+        </div>
+    </div>
+</body>
+</html>
