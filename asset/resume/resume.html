@@ -1,92 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        function downloadResume() {
-            const link = document.createElement('a');
-            link.href = 'resume.pdf'; // Link to the PDF file of the resume
-            link.download = 'resume.pdf';
-            link.click();
-        }
-
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Résumé of Tamilarasan M, backend-focused developer and MCA graduate.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Tamilarasan M | Résumé</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#172033;--muted:#637087;--accent:#5270dd;--line:#e4e9f2}
+    *{box-sizing:border-box}
+    body{margin:0;background:#f3f5f9;color:var(--ink);font:14px/1.7 Manrope,Arial,sans-serif}
+    .toolbar{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;gap:12px;padding:14px max(18px,calc((100% - 900px)/2));background:rgba(11,16,32,.96);backdrop-filter:blur(12px)}
+    .toolbar a,.toolbar button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:transparent;color:white;font:700 12px Manrope,Arial,sans-serif;cursor:pointer}
+    .toolbar .print{background:#b7f36a;border-color:#b7f36a;color:#17220a}
+    .resume{width:min(900px,calc(100% - 32px));margin:28px auto;padding:clamp(26px,5vw,58px);background:white;border:1px solid #e6ebf3;box-shadow:0 20px 60px rgba(15,23,42,.07)}
+    .eyebrow{margin:0 0 12px;color:var(--accent);font:500 10px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
+    h1,h2,h3{line-height:1.2;letter-spacing:-.035em}
+    h1{margin:0;font-size:clamp(32px,5vw,46px);font-weight:800}
+    .role{margin:8px 0 18px;color:var(--muted);font-size:16px;font-weight:700}
+    .contact{display:flex;flex-wrap:wrap;gap:8px 18px;padding-bottom:24px;border-bottom:2px solid var(--ink);color:var(--muted);font-size:12px}
+    a{color:var(--accent);text-decoration:none;overflow-wrap:anywhere}
+    section{margin-top:28px}
+    h2{margin:0 0 14px;font-size:15px;text-transform:uppercase;letter-spacing:.08em}
+    p{margin:0 0 10px}
+    .summary{font-size:13px;color:#46536a}
+    .job,.school,.project{padding:0 0 18px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+    .job:last-child,.school:last-child,.project:last-child{margin-bottom:0}
+    .row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+    h3{margin:0 0 5px;font-size:15px}
+    .muted{color:var(--muted);font-size:12px}
+    ul{margin:10px 0 0;padding-left:18px;color:#46536a}
+    li{padding-left:3px;margin:4px 0}
+    .skills{display:grid;grid-template-columns:130px 1fr;gap:8px 16px;font-size:12px}
+    .skills strong{color:#253149}
+    .footer-note{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);color:#8490a3;font-size:10px}
+    @media(max-width:560px){.row{flex-direction:column;gap:4px}.skills{grid-template-columns:1fr;gap:3px}.skills p{margin-bottom:10px}}
+    @media print{body{background:#fff;font-size:11px}.toolbar{display:none}.resume{width:100%;margin:0;padding:8mm;border:0;box-shadow:none}.contact{padding-bottom:12px}section{margin-top:18px}.job,.school,.project{padding-bottom:10px;margin-bottom:10px;break-inside:avoid}a{color:inherit;text-decoration:none}@page{size:A4;margin:10mm}}
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <div class="max-w-4xl mx-auto my-10 p-8 bg-white shadow-lg rounded-lg">
-        <!-- Buttons -->
-        <div class="flex justify-between mb-6">
-            <button onclick="downloadResume()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-                Download Resume
-            </button>
-            <button onclick="goBack()" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
-                Back
-            </button>
-        </div>
-
-        <!-- Name -->
-        <div class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-gray-900">TAMILARASAN.M</h1>
-            <p class="text-lg text-gray-600">Student</p>
-        </div>
-
-        <!-- Profile -->
-        <div class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-900">Profile</h2>
-            <p class="mt-2 text-gray-700">Web developer. I consider myself a responsible and orderly person. I am looking forward to my first work experience.</p>
-        </div>
-
-        <!-- Contact -->
-        <div class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-900">Contact Me</h2>
-            <ul class="mt-2 text-gray-700">
-                <li><strong>Phone:</strong> +91 6369479748</li>
-                <li><strong>Email:</strong> <a href="mailto:arasan7102003@gmail.com" class="text-blue-600">arasan7102003@gmail.com</a></li>
-                <li><strong>Address:</strong> Sastha street, Mundiyampakkam, Vikravandi taluk, Villupuram - 605601</li>
-            </ul>
-        </div>
-
-        <!-- Education -->
-        <div class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-900">Education</h2>
-            <ul class="mt-2 text-gray-700">
-                <li><strong>SRM Infotech:</strong> Python course and Microsoft Office (2023)</li>
-                <li><strong>SIGA College of Management and Computer Science:</strong> BCA Computer Application (2021 - 2024)</li>
-            </ul>
-        </div>
-
-        <!-- Languages -->
-        <div class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-900">Languages</h2>
-            <ul class="mt-2 text-gray-700">
-                <li><strong>Native:</strong> Tamil</li>
-                <li><strong>Knowledge in:</strong> English</li>
-            </ul>
-        </div>
-
-        <!-- Computer Skills -->
-        <div class="mb-6">
-            <h2 class="text-2xl font-semibold text-gray-900">Computer Skills</h2>
-            <ul class="mt-2 text-gray-700">
-                <li>Operating systems</li>
-                <li>Programming</li>
-                <li>Databases</li>
-                <li>Video editing</li>
-                <li>Data and information visualization</li>
-            </ul>
-        </div>
-
-        <!-- Volunteer Experience -->
-        <div>
-            <h2 class="text-2xl font-semibold text-gray-900">Volunteer Experience</h2>
-            <p class="mt-2 text-gray-700">Worked for online services through public network centre.</p>
-        </div>
-    </div>
+<body>
+  <div class="toolbar"><a href="../../index.html">← Back to portfolio</a><button class="print" type="button" onclick="window.print()">Print / Save as PDF ↗</button></div>
+  <main class="resume">
+    <header>
+      <p class="eyebrow">RÉSUMÉ · 2026</p>
+      <h1>Tamilarasan M</h1>
+      <p class="role">Backend Developer · Full-Stack Developer</p>
+      <div class="contact">
+        <a href="mailto:arasan7102003@gmail.com">arasan7102003@gmail.com</a>
+        <a href="https://github.com/tamilkakashi" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/tamil-arasan-b2328b326/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>Tamil Nadu, India</span>
+      </div>
+    </header>
+    <section>
+      <h2>Professional summary</h2>
+      <p class="summary">MCA graduate with a backend-focused MERN stack background and three months of experience as a Backend Developer Intern at MoviCloud Labs. Worked on API development with Node.js, Express and MongoDB. Interested in building maintainable REST APIs, data-driven applications and reliable integrations. Seeking an entry-level Backend Developer or Full-Stack Developer opportunity.</p>
+    </section>
+    <section>
+      <h2>Experience</h2>
+      <article class="job">
+        <div class="row"><div><h3>Backend Developer Intern</h3><p class="muted">MoviCloud Labs</p></div><span class="muted">3 months</span></div>
+        <ul>
+          <li>Worked on backend API development using Node.js and Express.</li>
+          <li>Used MongoDB for application data workflows.</li>
+          <li>Gained practical experience with server-side development and API integration.</li>
+        </ul>
+      </article>
+    </section>
+    <section>
+      <h2>Selected projects</h2>
+      <article class="project">
+        <div class="row"><h3>MediFind Nearby API</h3><span class="muted">Node.js · Express · MongoDB</span></div>
+        <p class="summary">A REST API concept for searching clinic, hospital and pharmacy listings by city, facility type or geographic proximity. Includes a 2dsphere index, bounded nearby search, pagination, query validation, rate limiting and environment-based configuration. Seed listings are fictional and unverified.</p>
+        <p class="muted">Source: <a href="https://github.com/tamilkakashi/Protfolio/tree/main/MediFind-Nearby-API">GitHub project folder</a></p>
+      </article>
+      <article class="project">
+        <div class="row"><h3>Banking App Prototype</h3><span class="muted">React · Express · MongoDB</span></div>
+        <p class="summary">A learning prototype exploring account registration, account data views, deposits and withdrawals. It is not a production banking system and must not be used with real financial data.</p>
+        <p class="muted">Frontend source: <a href="https://github.com/tamilkakashi/Bank-Client">GitHub repository</a></p>
+      </article>
+    </section>
+    <section>
+      <h2>Technical skills</h2>
+      <div class="skills">
+        <strong>Backend</strong><p>Node.js, Express.js, REST APIs, request validation, error handling</p>
+        <strong>Database</strong><p>MongoDB, Mongoose, schema modelling, geospatial querying</p>
+        <strong>Frontend</strong><p>React, JavaScript, HTML5, CSS3, Bootstrap</p>
+        <strong>Tools</strong><p>Git, GitHub, npm, environment configuration</p>
+      </div>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <article class="school"><div class="row"><h3>Master of Computer Applications (MCA)</h3><span class="muted">2026 · 81.125%</span></div><p class="muted">Completed</p></article>
+      <article class="school"><div class="row"><h3>Bachelor of Computer Applications (BCA)</h3><span class="muted">2021–2024 · 80.4%</span></div><p class="muted">SIGA College of Management and Computer Science</p></article>
+    </section>
+    <section>
+      <h2>Certificates</h2>
+      <p class="summary">Java Programming · C for Beginners</p>
+    </section>
+    <p class="footer-note">This résumé page avoids publishing a full residential address. Use the Print / Save as PDF button to create a shareable copy. Confirm all details and internship dates before sending to employers.</p>
+  </main>
 </body>
 </html>
