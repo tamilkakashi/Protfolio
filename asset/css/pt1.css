@@ -24,7 +24,7 @@ button, input { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 3px solid #6b8cff; outline-offset: 4px; }
 .shell { width: min(var(--shell), calc(100% - 48px)); margin-inline: auto; }
-.section { padding-top: 100px; padding-bottom: 100px; }
+.section { padding-top: 100px; padding-bottom: 100px; background: #fff; color: var(--ink); }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 1000; padding: 10px 14px; background: var(--accent); color: var(--ink); transform: translateY(-150%); border-radius: 8px; }
 .skip-link:focus { transform: translateY(0); }
 .site-header { position: sticky; top: 0; z-index: 100; background: rgba(11,16,32,.92); border-bottom: 1px solid var(--line-dark); backdrop-filter: blur(16px); }
