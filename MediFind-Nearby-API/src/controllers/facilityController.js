@@ -4,7 +4,8 @@ const Facility = require("../models/Facility");
 const FACILITY_TYPES = new Set(["clinic", "hospital", "pharmacy"]);
 
 function escapeRegex(value) {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const regexMeta = new Set([".", "*", "+", "?", "^", "$", "{", "}", "(", ")", "|", "[", "]", "\\\\"]);
+  return value.split("").map((character) => regexMeta.has(character) ? "\\\\" + character : character).join("");
 }
 
 function parsePositiveInteger(value, fallback, max) {
