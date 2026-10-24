@@ -1,32 +1,50 @@
-const btn = document.getElementById('button');
+(() => {
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   btn.value = 'Sending...';
-
-   const serviceID = 'default_service';
-   const templateID = 'template_itehq8j';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+      navLinks.classList.toggle("is-open", !isOpen);
+      document.body.classList.toggle("nav-open", !isOpen);
     });
-});
 
-document.getElementById('hireButton').addEventListener('click', function() {
-  const email = "arasan7102003@gmail.com"; // Replace with your email
-  const subject = "Hiring Notification";
-  const body = "You are hired";
-  window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        navLinks.classList.remove("is-open");
+        document.body.classList.remove("nav-open");
+      });
+    });
 
-window.addEventListener('load', function() {
-  const loader = document.querySelector('.loader');
-  loader.style.display = 'none';
-});
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        navLinks.classList.remove("is-open");
+        document.body.classList.remove("nav-open");
+        menuToggle.focus();
+      }
+    });
+  }
+
+  const copyButton = document.getElementById("copyEmail");
+  const copyStatus = document.getElementById("copyStatus");
+  if (copyButton && copyStatus) {
+    copyButton.addEventListener("click", async () => {
+      const email = copyButton.dataset.email;
+      try {
+        await navigator.clipboard.writeText(email);
+        copyStatus.textContent = "Email address copied.";
+      } catch (_error) {
+        copyStatus.textContent = "Copy unavailable here. Use the email link above.";
+      }
+    });
+  }
+
+  const year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
+})();
