@@ -25,6 +25,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v6
 
+      - name: Validate portfolio links and interactions
+        run: |
+          node scripts/check-portfolio.js
+          find asset/js MediFind-Nearby-API scripts -type f -name '*.js' -print0 | xargs -0 -n1 node --check
+          node -e "JSON.parse(require('node:fs').readFileSync('MediFind-Nearby-API/package.json', 'utf8')); console.log('MediFind API package.json is valid')"
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
