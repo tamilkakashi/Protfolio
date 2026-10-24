@@ -1,395 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="./asset/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="./asset/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./asset/css/line-awesome.min.css.css">
-    <link rel="stylesheet" href="./asset/css/pt1.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Tamilarasan M — MCA graduate and backend-focused developer working with Node.js, Express, MongoDB and React.">
+  <title>Tamilarasan M | Backend & Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./asset/css/pt1.css">
 </head>
-<div class="loader"></div>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <h2 class="logo-heading">TAMILARASAN M</h2>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars hamburger-icon"></i>
-                <i class="fas fa-times cross-icon"></i>
-            </div>
-            <div class="menu">
-                <ul class="menu-list">
-                    <li class="menu-list-items">
-                        <a class="links" href="#home">
-                            Home
-                        </a>
-                    </li>
-                    <li class="menu-list-items">
-                        <a class="links" href="#skills">
-                            My Skills
-                        </a>
-                    </li>
-                    <li class="menu-list-items">
-                        <a class="links" href="#Qualifications">
-                            Qualifications
-                        </a>
-                    </li>
-                    <li class="menu-list-items">
-                        <a class="links" href="#portfolio">
-                            Projects
-                        </a>
-                    </li>
-                    <li class="menu-list-items">
-                        <a class="links" href="#about">
-                            About
-                        </a>
-                    </li>
-                    <li class="menu-list-items">
-                        <a class="links" href="#E-MAIL">
-                            E-MAIL
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <section id="home" class="hero">
-        <div class="intro">
-            <div class="headings">
-                <div>
-                    <img src="./asset/gif/Screenshot 2024-09-02 143150_edited.jpg"class="resume-image">
-                </div>
-                <br>
-                <h3 class="greet-heading"> Hello, I'm</h3>
-                <h1 class="my-heading">TAMILARASAN M</h1>
-                <h4 class="sub-heading">A WEB DEVELOPER</h4>
-            </div>
-            <div class="intro-buttons">
-                <button class="btn common-btn" id="hireButton">Hire Me </button>
-                <a href="./asset/resume/resume.html">
-                    <button class="btn ghost-btn">Get Resume</button></a>
-            </div>
-        </div>
-    </section><br>
-    <!-- Skills Section -->
-    <section class="skills  text-center " id="skills">
-        <h2 class="section-title" data-aos="fade-down"><b>MY SKILLS</b></h2>
-        <div class="row justify-content-center mt-5">
-            <!-- HTML5 Skill -->
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
-                <div class="skill-circle">
-                    <div class="circle html-circle">
-                        <i class="fa-brands fa-html5"></i>
-                        80%
-                    </div>
-                    <h3 class="skill_name mt-3">HTML& CSS</h3>
-                </div>
-            </div>
-            <!-- C Skill -->
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right" data-aos-delay="250">
-                <div class="skill-circle">
-                    <div class="circle css-circle">
-                        <i class="fa-solid fa-c"></i>
-                        80%
-                    </div>
-                    <h3 class="skill_name mt-3">C FOR BIGINNERS</h3>
-                </div>
-            </div>
-            <!-- Java Skill -->
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right" data-aos-delay="500">
-                <div class="skill-circle">
-                    <div class="circle java-circle">
-                        <i class="fa-brands fa-java"></i>
-                        60%
-                    </div>
-                    <h3 class="skill_name mt-3">Java</h3>
-                </div>
-            </div>
-            <!-- Python Skill -->
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right" data-aos-delay="750">
-                <div class="skill-circle">
-                    <div class="circle python-circle">
-                        <i class="fa-brands fa-python"></i>
-                        40%
-                    </div>
-                    <h3 class="skill_name mt-3">Python</h3>
-                </div>
-            </div>
-            <!-- JavaScript Skill -->
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right" data-aos-delay="1000">
-                <div class="skill-circle">
-                    <div class="circle js-circle">
-                        <i class="fa-brands fa-js"></i>
-                        60%
-                    </div>
-                    <h3 class="skill_name mt-3">JavaScript</h3>
-                </div>
-            </div>
-            <!-- MS Excel Skill -->
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right" data-aos-delay="1250">
-                <div class="skill-circle">
-                    <div class="circle excel-circle">
-                        <i class="fa-brands fa-microsoft"></i>
-                        70%
-                    </div>
-                    <h3 class="skill_name mt-3">MS Office</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-<br>
-<!-- SECTION -->
-    <section id="Qualifications" class="qualifications">
-        <h2><b>Qualifications</b></h2>
-        <ul>
-            <li>
-                <h3>Bachelor of Computer Application</h3>
-                <p>Graduated: 2024</p>
-                <a href="./asset/certificates/BCA.jpg" class="button">View Certificate</a>
-            </li>
-            <li>
-                <h3>Certified Java Programming</h3>
-                <p>Obtained: 2024</p>
-                <a href="./asset/certificates/java-certificate.png" class="button">View Certificate</a>
-            </li>
-            <li>
-                <h3>C For Beginners</h3>
-                <p>Completed: 2024</p>
-                <a href="./asset/certificates/c-certificate.png" class="button">View Certificate</a>
-            </li>
-        </ul>
-    </section>
-    <!-- SECTION -->
-     <!-- Portfolio -->
-    <section class="portfolio" id="portfolio">
-        <div class="portfolio-heading">
-            <h1 class="my-heading text-center">My Projects</h1>
-        </div>
-        <div class="portfolio-content">
-            <div class="my-row">
-                <div class="my-col">
-                    <div class="my-card port-card">
-                        <div class="image">
-                            <a href="https://tamilkakashi.github.io/Pac-Man/"><img src="asset/gif/pac-man.jpg"
-                                    alt=""></a>
-                        </div>
-                        <h3 class="greet-heading blue-text">Pac Man</h3>
-                        <p><a href="https://github.com/tamilkakashi/Pac-Man.git" class="link-custom">Code Here</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="my-col">
-                    <div class="my-card port-card">
-                        <div class="image">
-                            <a href="https://tamilkakashi.github.io/BouncinBalls/"><img src="asset/gif/moving ball.jpg"
-                                    alt=""></a>
-                        </div>
-                        <h3 class="greet-heading blue-text">Bouncing Ball</h3>
-                        <p><a href="https://github.com/tamilkakashi/BouncinBalls" class="link-custom">Code Here</a>
-                    </div>
-                </div>
-                <div class="my-col">
-                    <div class="my-card port-card">
-                        <div class="image">
-                            <a href="https://tamilkakashi.github.io/MapLocation/"><img src="asset/gif/map .jpg"
-                                    alt=""></a>
-                        </div>
-                        <h3 class="greet-heading blue-text">Map Location</h3>
-                        <p><a href="https://github.com/tamilkakashi/MapLocation.git" class="link-custom">Code Here</a>
-                    </div>
-                </div>
-            </div>
-            <div class="my-row">
-                <div class="my-col">
-                    <div class="my-card port-card">
-                        <div class="image">
-                            <a href="https://tamilkakashi.github.io/EyeMovement/"><img src="asset/gif/move eye.jpg"
-                                    alt=""></a>
-                        </div>
-                        <h3 class="greet-heading blue-text">Move Eye</h3>
-                        <p><a href="https://github.com/tamilkakashi/EyeMovement.git" class="link-custom">Code Here</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="my-col">
-                    <div class="my-card port-card">
-                        <div class="image">
-                            <a href="https://tamilkakashi.github.io/Wordcount/"><img src="asset/gif/wc.png" alt=""></a>
-                        </div>
-                        <h3 class="greet-heading blue-text">
-                        </h3>
-                        <p class="small-para blue-text">Wordcount
-                        <p><a href="https://github.com/tamilkakashi/Wordcount.git" class="link-custom">Code Here</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="my-col">
-                    <div class="my-card port-card">
-                        <div class="image">
-                            <a href="https://tamilkakashi.github.io/Boston/"><img src="asset/gif/boston_data_pro_logo.png" alt=""></a>
-                        </div>
-                        <h3 class="greet-heading blue-text">
-                            Boston Data
-                        </h3>
-                        <p><a href="https://github.com/tamilkakashi/Boston.git" class="link-custom">Code Here</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="my-row">
-                <div class="my-col">
-                    <div class="my-card port-card">
-                        <div class="image">
-                            <a href="https://tamilkakashi.github.io/add-pac-man/"><img src="asset/gif/PacMan1.png"
-                                    alt=""></a>
-                        </div>
-                        <h3 class="greet-heading blue-text">
-                            Add Pac-Man
-                        </h3>
-                        <p><a href="https://github.com/tamilkakashi/add-pac-man.git" class="link-custom">Code Here</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="my-col">
-                    <div class="my-card port-card">
-                        <div class="image">
-                            <a href="https://tamilkakashi.github.io/moving-ball/"><img src="asset/gif/images.jpeg"
-                                    alt=""></a>
-                        </div>
-                        <h3 class="greet-heading blue-text">
-                            Ball Movement
-                        </h3>
-                        <p><a href="https://github.com/tamilkakashi/moving-ball.git" class="link-custom">Code Here</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="my-col">
-                    <div class="my-card port-card">
-                        <div class="image">
-                            <a href="https://tamilkakashi.github.io/Tower/"><img src="asset/gif/tower.png"
-                                    alt=""></a>
-                        </div>
-                        <h3 class="greet-heading blue-text">
-                            Tower
-                        </h3>
-                        <p><a href="https://github.com/tamilkakashi/Tower.git" class="link-custom">Code Here</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Section -->
-<section id="about" class="full-height px-lg-5" data-aos="fade-up">
-    <div class="container">
-        <div class="roww align-items-center">
-            <div class="col-md-5 text-center text-md-left">
-                <h3 class="display-4 fw-bold">
-                    <span class="text-brand">ABOUT ME</span>
-                </h3>
-                <p class="lead mb-4" data-aos="fade-up" data-aos-delay="300">
-                    Hi there! I’m <strong>Tamilarasan M</strong>, a passionate Web Developer with over three years of experience and a completed UG degree in BCA with a specialization in Web Development. Currently pursuing an MCA degree in Coimbatore, I specialize in programming languages such as Java, Python, and JavaScript. I also have a strong background in web development, mobile applications, and machine learning.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-    <br>
-    <!-- Contact me section -->
-    <section class="contact" id="E-MAIL">
-        <div class="contact-heading">
-            <h1 class="my-heading text-center">Contact Me</h1>
-        </div>
-        <form id="form">
-            <div class="field">
-                <label for="to_name"><b>Name</b></label>
-                <input type="text" name="to_name" id="to_name" placeholder="Name">
-            </div>
-            <div class="field">
-                <label for="from_name"><b>From_Name</b></label>
-                <input type="text" name="from_name" id="from_name" placeholder="Your Name">
-            </div>
-            <div class="field">
-                <label for="message"><b>Message</b></label>
-                <input type="text" name="message" id="message" placeholder="Enter Your Message">
-            </div>
-            <div class="field">
-                <label for="Subject"><b>Subject</b></label>
-                <input type="text" name="Subject" id="Subject" placeholder="Subject">
-            </div><br>
-            <div class="submitt">
-                <input type="submit" id="button" value="Send Email">
-            </div>
-        </form>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Tamilarasan M — home"><span class="brand-mark">TM</span><span>Tamilarasan<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation"><span></span><span></span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
 
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-        <script type="text/javascript">
-            emailjs.init('XQjhmRfpJJmFah9t_')
-        </script>
+  <main id="main">
+    <section class="hero section shell" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> OPEN TO BACKEND & FULL-STACK ROLES</p>
+        <h1>I build useful products with <span>reliable backend systems.</span></h1>
+        <p class="hero-lede">I’m Tamilarasan M, an MCA graduate and backend-focused developer. I build REST APIs and practical web applications with Node.js, Express, MongoDB and React.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore projects <span aria-hidden="true">↘</span></a>
+          <a class="button button-secondary" href="./asset/resume/resume.html">View résumé <span aria-hidden="true">↗</span></a>
         </div>
-        <br>
+        <div class="hero-socials" aria-label="Developer profiles">
+          <a href="https://github.com/tamilkakashi" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/tamil-arasan-b2328b326/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="mailto:arasan7102003@gmail.com">Email <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <aside class="hero-aside" aria-label="Professional snapshot">
+        <div class="portrait-frame">
+          <div class="portrait-glow"></div>
+          <img class="portrait" src="./asset/gif/Screenshot%202024-09-02%20143150_edited.jpg" alt="Portrait of Tamilarasan M" fetchpriority="high">
+          <div class="portrait-caption"><span class="caption-pip"></span><span>Backend-focused developer</span></div>
+        </div>
+        <div class="snapshot-card">
+          <p class="card-label">RECRUITER SNAPSHOT</p>
+          <div class="snapshot-row"><span>Current focus</span><strong>Backend / Full-stack</strong></div>
+          <div class="snapshot-row"><span>Core stack</span><strong>Node · Express · MongoDB</strong></div>
+          <div class="snapshot-row"><span>Education</span><strong>MCA · 2026</strong></div>
+          <div class="snapshot-row"><span>Experience</span><strong>3-month internship</strong></div>
+        </div>
+      </aside>
     </section>
-    <br>
-    <!-- Footer section -->
-    <footer class="footer">
-        <div class="footer-content text-center">
-            <h4>
-                Copyright © 2024 All rights reserved |
-                This portfolio website template is created
-                by M Tamilarasan.
-            </h4>
-            <div class="social-links">
-                <div class="footer-menu">
-                    <ul class="footer-menu-list">
-                        <li class="footer-list-items">
-                            <a class="footer-links" href="https://www.facebook.com/profile.php?id=100040756115756">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="footer-list-items">
-                            <a class="footer-links" href="https://x.com/Tamilkakashi">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="footer-list-items">
-                            <a class="footer-links"
-                                href="https://www.instagram.com/ms_tamil_arasan?igsh=MTk2cG4zaThzYWRyaA==">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="footer-list-items">
-                            <a class="footer-links" href="https://www.linkedin.com/in/tamil-arasan-b2328b326/">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        <li class="footer-list-items">
-                            <a class="footer-links" href="https://github.com/tamilkakashi/tamilkakashi">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+
+    <section class="proof-strip" aria-label="Career highlights">
+      <div class="shell proof-grid">
+        <div><span class="proof-number">01</span><span class="proof-text">Backend internship<br><strong>MoviCloud Labs</strong></span></div>
+        <div><span class="proof-number">02</span><span class="proof-text">API development<br><strong>Node.js & Express</strong></span></div>
+        <div><span class="proof-number">03</span><span class="proof-text">Database work<br><strong>MongoDB</strong></span></div>
+        <div><span class="proof-number">04</span><span class="proof-text">Graduate degree<br><strong>MCA · 81.125%</strong></span></div>
+      </div>
+    </section>
+
+    <section class="section shell section-grid" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2>Backend thinking.<br><span>Product-minded execution.</span></h2>
+      </div>
+      <div class="section-body">
+        <p class="large-copy">I’m a developer focused on the part of an application that makes it dependable: API design, data modelling, validation and clear error handling.</p>
+        <p>I completed my MCA in 2026 and spent three months as a Backend Developer Intern at MoviCloud Labs, working on APIs with Node.js, Express and MongoDB. I’m looking for an entry-level Backend Developer or Full-Stack Developer role where I can contribute, learn from code reviews and build maintainable software.</p>
+        <div class="focus-pills"><span>REST API design</span><span>MongoDB</span><span>Input validation</span><span>React integration</span></div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="experience">
+      <div class="shell">
+        <div class="section-heading section-heading-wide">
+          <div><p class="eyebrow">02 / EXPERIENCE</p><h2>Professional experience</h2></div>
+          <p class="section-intro">A concise view of my industry experience and technical direction.</p>
         </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
-        integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-        </script>
-    <script src="./asset/js/pt.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-            (function () {
-                emailjs.init({
-                    publicKey: "XQjhmRfpJJmFah9t_",
-                });
-            })();
-    </script>
-    <script src="./asset/js/script.js"></script>
+        <article class="experience-card">
+          <div class="experience-date"><span class="timeline-dot"></span><span>3 months</span></div>
+          <div class="experience-main">
+            <div class="experience-title-row"><div><h3>Backend Developer Intern</h3><p class="company">MoviCloud Labs</p></div><span class="tag tag-outline">Internship</span></div>
+            <ul class="clean-list">
+              <li>Worked on API development using Node.js and Express.</li>
+              <li>Used MongoDB as the data store for backend application workflows.</li>
+              <li>Built practical experience with server-side development and API integration.</li>
+            </ul>
+            <p class="note">The internship duration is listed without dates because exact start and end dates have not been provided here.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="skills">
+      <div class="section-heading section-heading-wide">
+        <div><p class="eyebrow">03 / TECHNICAL SKILLS</p><h2>Tools I work with</h2></div>
+        <p class="section-intro">Grouped by where they fit in an application, rather than arbitrary skill percentages.</p>
+      </div>
+      <div class="skill-grid">
+        <article class="skill-card"><span class="skill-index">01</span><h3>Backend</h3><p>Node.js, Express.js, REST APIs, request validation, error handling</p><div class="skill-chips"><span>Node.js</span><span>Express</span><span>REST</span></div></article>
+        <article class="skill-card"><span class="skill-index">02</span><h3>Data</h3><p>MongoDB, Mongoose, schema modelling, filtering and geospatial queries</p><div class="skill-chips"><span>MongoDB</span><span>Mongoose</span><span>GeoJSON</span></div></article>
+        <article class="skill-card"><span class="skill-index">03</span><h3>Frontend</h3><p>React, JavaScript, HTML, CSS and responsive interfaces</p><div class="skill-chips"><span>React</span><span>JavaScript</span><span>CSS</span></div></article>
+        <article class="skill-card"><span class="skill-index">04</span><h3>Workflow</h3><p>Git and GitHub, npm, environment configuration and local development</p><div class="skill-chips"><span>Git</span><span>GitHub</span><span>npm</span></div></article>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="projects">
+      <div class="shell">
+        <div class="section-heading section-heading-wide">
+          <div><p class="eyebrow">04 / SELECTED PROJECTS</p><h2>Built to solve a problem</h2></div>
+          <p class="section-intro">Source code is linked directly. Demo data and prototype limitations are called out honestly.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card project-featured">
+            <div class="project-art map-art" aria-hidden="true"><div class="map-lines"></div><span class="map-pin pin-one"></span><span class="map-pin pin-two"></span><span class="map-pin pin-three"></span><span class="map-radius"></span><span class="map-label">NEARBY SEARCH / API</span></div>
+            <div class="project-content">
+              <div class="project-topline"><span class="tag tag-green">Backend project</span><span class="project-number">PROJECT 01</span></div>
+              <h3>MediFind Nearby API</h3>
+              <p>A REST API concept for discovering clinics, hospitals and pharmacies by type, city or geographic proximity.</p>
+              <ul class="project-points"><li>MongoDB geospatial search with a bounded radius</li><li>Filtering, pagination and validated query parameters</li><li>Environment-based configuration, Helmet and rate limiting</li></ul>
+              <div class="tech-list"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>REST API</span></div>
+              <p class="project-disclaimer">Status: portfolio project in progress. Seed records are fictional and are not verified healthcare listings.</p>
+              <a class="text-link" href="https://github.com/tamilkakashi/Protfolio/tree/main/MediFind-Nearby-API" target="_blank" rel="noopener noreferrer">Review source code <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-art banking-art" aria-hidden="true"><div class="bank-window"><span></span><span></span><span></span><div class="bank-balance"></div><div class="bank-bars"><i></i><i></i><i></i><i></i></div></div><span class="bank-art-label">ACCOUNT WORKFLOWS</span></div>
+            <div class="project-content">
+              <div class="project-topline"><span class="tag tag-outline">Prototype</span><span class="project-number">PROJECT 02</span></div>
+              <h3>Banking App Prototype</h3>
+              <p>A learning project exploring a React client, account screens, registration, deposit and withdrawal workflows, with a separate Express/MongoDB backend.</p>
+              <div class="tech-list"><span>React</span><span>Express</span><span>MongoDB</span></div>
+              <p class="project-disclaimer">Prototype only—not suitable for real financial data. Backend credentials and authorization must be secured before this project is presented as a production-ready application.</p>
+              <a class="text-link" href="https://github.com/tamilkakashi/Bank-Client" target="_blank" rel="noopener noreferrer">Review frontend source <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell section-grid" id="education">
+      <div class="section-heading"><p class="eyebrow">05 / EDUCATION</p><h2>Academic foundation</h2></div>
+      <div class="education-list">
+        <article class="education-item"><div class="education-year">2026</div><div><h3>Master of Computer Applications (MCA)</h3><p>Completed · 81.125%</p></div><span class="education-mark">MCA</span></article>
+        <article class="education-item"><div class="education-year">2024</div><div><h3>Bachelor of Computer Applications (BCA)</h3><p>SIGA College of Management and Computer Science · 80.4%</p></div><span class="education-mark">BCA</span></article>
+        <div class="certificate-links"><p class="mini-label">CERTIFICATES</p><a href="./asset/certificates/java-certificate.png" target="_blank" rel="noopener noreferrer">Java Programming certificate ↗</a><a href="./asset/certificates/c-certificate.png" target="_blank" rel="noopener noreferrer">C for Beginners certificate ↗</a></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="shell contact-wrap">
+        <div><p class="eyebrow">06 / CONTACT</p><h2>Let’s talk about<br><span>the work you’re building.</span></h2><p class="contact-copy">I’m interested in entry-level Backend Developer and Full-Stack Developer opportunities.</p></div>
+        <div class="contact-card"><p class="mini-label">GET IN TOUCH</p><a class="contact-email" href="mailto:arasan7102003@gmail.com">arasan7102003@gmail.com <span aria-hidden="true">↗</span></a><button class="copy-email" id="copyEmail" type="button" data-email="arasan7102003@gmail.com">Copy email address</button><div class="contact-links"><a href="https://www.linkedin.com/in/tamil-arasan-b2328b326/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/tamilkakashi" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="./asset/resume/resume.html">Résumé ↗</a></div><p class="copy-status" id="copyStatus" aria-live="polite"></p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="#home"><span class="brand-mark">TM</span><span>Tamilarasan<span class="brand-dot">.</span></span></a><p>Designed to make the work easy to review.</p><p>© <span id="year">2026</span> Tamilarasan M</p></div></footer>
+  <script src="./asset/js/script.js" defer></script>
 </body>
 </html>
-
