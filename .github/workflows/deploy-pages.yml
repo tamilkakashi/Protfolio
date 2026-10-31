@@ -39,11 +39,10 @@ jobs:
           const matches = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
           if (matches.length !== 1) throw new Error('Expected exactly one inline bank demo script.');
           new Function(matches[0][1]);
-          const cssMatch = html.match(/<style>([\\s\\S]*?)<\\/style>/);
-          if (!cssMatch) throw new Error('Bank demo stylesheet is missing.');
-          const css = cssMatch[1]
-            .replace(/\\/\\*[\\s\\S]*?\\*\\//g, '')
-            .replace(/"(?:\\\\.|[^"\\\\])*"|'(?:\\\\.|[^'\\\\])*'/g, '""');
+          const styleStart = html.indexOf('<style>');
+          const styleEnd = html.indexOf('</style>');
+          if (styleStart < 0 || styleEnd < 0) throw new Error('Bank demo stylesheet is missing.');
+          const css = html.slice(styleStart + 7, styleEnd).replace(/\/\*[\s\S]*?\*\//g, '');
           const stack = [];
           const pairs = { ')': '(', ']': '[', '}': '{' };
           for (const ch of css) {
