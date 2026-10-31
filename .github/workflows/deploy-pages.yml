@@ -36,7 +36,7 @@ jobs:
           node <<'NODE'
           const fs = require('node:fs');
           const html = fs.readFileSync('bank-demo/index.html', 'utf8');
-          const matches = [...html.matchAll(/<script>([\\s\\S]*?)<\\/script>/g)];
+          const matches = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
           if (matches.length !== 1) throw new Error('Expected exactly one inline bank demo script.');
           new Function(matches[0][1]);
           console.log('Bank demo JavaScript syntax is valid');
