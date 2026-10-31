@@ -31,6 +31,17 @@ jobs:
           find asset/js MediFind-Nearby-API scripts -type f -name '*.js' -print0 | xargs -0 -n1 node --check
           node -e "JSON.parse(require('node:fs').readFileSync('MediFind-Nearby-API/package.json', 'utf8')); console.log('MediFind API package.json is valid')"
 
+      - name: Validate interactive bank demo JavaScript
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const html = fs.readFileSync('bank-demo/index.html', 'utf8');
+          const matches = [...html.matchAll(/<script>([\\s\\S]*?)<\\/script>/g)];
+          if (matches.length !== 1) throw new Error('Expected exactly one inline bank demo script.');
+          new Function(matches[0][1]);
+          console.log('Bank demo JavaScript syntax is valid');
+          NODE
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
@@ -39,6 +50,8 @@ jobs:
           mkdir -p _site
           cp index.html _site/index.html
           cp -R asset _site/asset
+          mkdir -p _site/bank-demo
+          cp bank-demo/index.html _site/bank-demo/index.html
           # Do not publish the superseded résumé PDF; the updated résumé page can be printed to PDF.
           rm -f _site/asset/resume/resume.pdf
           touch _site/.nojekyll
