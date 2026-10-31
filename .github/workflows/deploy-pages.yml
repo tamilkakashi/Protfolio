@@ -39,7 +39,19 @@ jobs:
           const matches = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
           if (matches.length !== 1) throw new Error('Expected exactly one inline bank demo script.');
           new Function(matches[0][1]);
-          console.log('Bank demo JavaScript syntax is valid');
+          const cssMatch = html.match(/<style>([\\s\\S]*?)<\\/style>/);
+          if (!cssMatch) throw new Error('Bank demo stylesheet is missing.');
+          const css = cssMatch[1]
+            .replace(/\\/\\*[\\s\\S]*?\\*\\//g, '')
+            .replace(/"(?:\\\\.|[^"\\\\])*"|'(?:\\\\.|[^'\\\\])*'/g, '""');
+          const stack = [];
+          const pairs = { ')': '(', ']': '[', '}': '{' };
+          for (const ch of css) {
+            if ('([{'.includes(ch)) stack.push(ch);
+            else if (')]}'.includes(ch) && stack.pop() !== pairs[ch]) throw new Error('Unbalanced CSS delimiter: ' + ch);
+          }
+          if (stack.length) throw new Error('Unclosed CSS delimiter: ' + stack.join(''));
+          console.log('Bank demo JavaScript and CSS syntax checks passed');
           NODE
 
       - name: Configure GitHub Pages
