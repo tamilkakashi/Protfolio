@@ -35,6 +35,7 @@ A learning prototype exploring account registration, data views, deposits and wi
 - [Frontend source](https://github.com/tamilkakashi/Bank-Client)
 - Prototype only; not suitable for real financial data. The backend requires credential rotation and stronger authentication/authorization before it should be treated as secure.
 - [Open the interactive browser-only demo](https://tamilkakashi.github.io/Protfolio/bank-demo/index.html) — fictional accounts and transactions are stored only in each visitor's browser.
+- Mobile layout verified in Chromium at 320–1365 CSS-pixel viewport widths. The bank navigation drawer supports section selection, outside-click closing and Escape-key closing.
 
 ## Portfolio structure
 
