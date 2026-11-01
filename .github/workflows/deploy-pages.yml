@@ -10,6 +10,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  deployments: write
 
 concurrency:
   group: github-pages
@@ -71,6 +72,35 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: _site
+
+      - name: Clear stale Pages deployment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const staleSha = '8a567a71aace3764de7f9acb7d3886a764b3c48e';
+            const deployments = await github.paginate(github.rest.repos.listDeployments, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              environment: 'github-pages',
+              per_page: 100
+            });
+            for (const deployment of deployments.filter(item => item.sha === staleSha)) {
+              const statuses = await github.rest.repos.listDeploymentStatuses({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                deployment_id: deployment.id,
+                per_page: 1
+              });
+              if (statuses.data[0] && ['in_progress', 'pending', 'queued'].includes(statuses.data[0].state)) {
+                await github.rest.repos.createDeploymentStatus({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  deployment_id: deployment.id,
+                  state: 'inactive',
+                  description: 'Superseded by the current responsive-site release.'
+                });
+              }
+            }
 
       - name: Deploy to GitHub Pages
         id: deployment
